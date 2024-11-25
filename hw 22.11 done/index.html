@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>                                                                                                                                                             
+      let dollar = 100;
+      let eur = 50;
+      let kzt = 1000;
+      const ttt = () => {
+        while (true) { 
+          let value = prompt("nemen toleisin?");
+          let num1 = +prompt(
+            "1) pizza 20 usd \n 2) sushi - 10 usd \n 3) coffee - 5 usd \n 4) fri - 1 usd"
+          )
+          if (num1 && value == "stop") {
+            alert("ok")
+            break;
+          } 
+         
+          if (dollar == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 1 && value == "dollar") {
+            dollar -= 20;
+            alert("shaksi");
+            alert(dollar + " dollar kaldi")
+         
+          }
+          if (kzt == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 1 && value == "kzt") {
+            kzt -= 100;
+             alert("shaksi");
+            alert(kzt + " tenge kaldy")
+           
+          }
+          if (eur == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 1 && value == "eur") {
+             alert("shaksi");
+            alert(eur + " eur kaldi")
+            eur -= 10;
+           
+          }
+
+
+
+          //2
+
+
+
+          if (dollar == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 2 && value == "dollar") {
+            dollar -= 10;
+            alert("shaksi");
+            alert(dollar + " dollar kaldi")
+         
+          }
+          if (kzt == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 2 && value == "kzt") {
+            kzt -= 50;
+             alert("shaksi");
+            alert(kzt + " tenge kaldy")
+           
+          }
+          if (eur == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 2 && value == "eur") {
+             alert("shaksi");
+            alert(eur + " eur kaldi")
+            eur -= 5;
+           
+          }
+
+
+
+
+          //3
+
+
+
+
+
+          if (dollar == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 3 && value == "dollar") {
+            dollar -= 5;
+            alert("shaksi");
+            alert(dollar + " dollar kaldi")
+         
+          }
+          if (kzt == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 3 && value == "kzt") {
+            kzt -= 25;
+             alert("shaksi");
+            alert(kzt + " tenge kaldy")
+           
+          }
+          if (eur == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 3 && value == "eur") {
+             alert("shaksi");
+            alert(eur + " eur kaldi")
+            eur -= 2.5;
+           
+          }
+
+
+
+
+
+
+          //3
+
+
+
+
+
+
+          if (dollar == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 4 && value == "dollar") {
+            dollar -= 1;
+            alert("shaksi");
+            alert(dollar + " dollar kaldi")
+         
+          }
+          if (kzt == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 4 && value == "kzt") {
+            kzt -= 10;
+             alert("shaksi");
+            alert(kzt + " tenge kaldy")
+           
+          }
+          if (eur == 0) {
+            alert("akshan bitti brat");
+            break;
+          }
+          if (num1 == 4 && value == "eur") {
+             alert("shaksi");
+            alert(eur + " eur kaldi")
+            eur -= 1;
+           
+          }
+          //4
+        }
+      }
+      
+      console.log(dollar);
+      console.log(ttt());
+    </script>
+  </body>
+</html>
