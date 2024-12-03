@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            const kitap = {
+           title: "dgorge",
+           autor: "whilam gg",
+           pages: 50,
+           isRead: true,           
+           toggleReadStatus: function () {
+             this.isRead = !this.isRead;
+            console.log(`Оқу күйі жаңартылды:  ${this.isRead}`);
+            
+           },
+
+           readBook: function() {
+            return(`siz ${kitap.title} okip shatsiz onin aftory ${kitap.autor} bet sany ${kitap.pages}`);
+            
+            
+           },
+      }
+      kitap.readBook();
+      kitap.toggleReadStatus()
+       
+ 
+  
+    </script>
+  </body>
+</html>
