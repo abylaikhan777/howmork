@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         const kos = { a: 1, b: 2, c: 3, d: 4};
+// const {a, b, c, d} = kos;
+//console.log(a + b + c  + d);
+
+// 2 tapshurma
+const tir = {a: 1, b: 2};
+const tir2 =  {...tir,c: 3, d: 4};
+console.log(tir2);
+
+// 3 tapshurma
+
+students = [
+{id: 1, name: "A"},
+{id: 2, name: "A"},
+{id: 3, name: "A"},
+{id: 4, name: "A"},
+{id: 5, name: "A"}
+];
+
+const tiktak1 = students.filter(student => student.id % 2 !== 0);
+const tikjup2 = students.filter(student => student.id % 2 === 0);
+
+console.log('Тақ нөмірдегі студенттер:', tiktak1);
+console.log('Жұп нөмірдегі студенттер:', tikjup2);
+
+  //4 tapsyrma
+
+  const library = {
+ name: 'Alatau HUB',
+ books: [
+{ name: 'book A', pages: 300 },
+{ name: 'book B', pages: 100 },
+{ name: 'book C', pages: 340 },
+{ name: 'book D', pages: 1000 },
+],
+};
+let sum = 0;
+library.books.forEach(book => { 
+     sum += book.pages / library.books.length;;
+});
+console.log(sum);
+
+    </script>
+</body>
+</html>
