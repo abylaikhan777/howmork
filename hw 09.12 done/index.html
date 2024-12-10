@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const library = {
+            name: 'ababi',
+            address: 'almaly',
+            books: [
+                {title: "ababii sholy", author: "kurmangazy", year: 1324, isAvailable: true},
+                {title: "shou", author: "Ismail", year: 1324, isAvailable: true},
+                {title: "alma kitaby", author: "imangaly", year: 1324, isAvailable: false}
+            ],
+            changeLibraryName: function () {
+                let newName = prompt('Change library name');
+                this.name = newName;
+            },
+
+            changeLibraryAddress: function () {
+                let newAddress = prompt('Change library address');
+                this.address = newAddress;
+            },
+            
+            listAvailableBooks: function () {
+                return this.books.filter(book => book.isAvailable).map(book => book.title);
+            },
+
+            addBooks: function () {
+                let title = prompt("Enter book title");
+                let author = prompt("Enter author");
+                let year = parseInt(prompt("Enter year"), 10);
+                let isAvailable = prompt("Is the book available? (true/false)") === 'true';
+                this.books.push({title, author, year, isAvailable});
+            },
+            
+            toggleBookAvailability: function() {
+                let title = prompt("Enter the title of the book to toggle availability");
+                let book = this.books.find(book => book.title === title);
+                
+                if (book) {
+                    book.isAvailable = !book.isAvailable;
+                    console.log(`The availability of "${book.title}" has been toggled to ${book.isAvailable}.`);
+                } else {
+                    console.log("This book is not in the library.");
+                }
+            },
+            allInOne: function () {
+                this.changeLibraryName();
+                this.changeLibraryAddress();
+                console.log("Books that you can read:", this.listAvailableBooks());
+                this.addBooks();
+                this.toggleBookAvailability();
+                console.log("Updated library state:", this);
+            }     
+        };
+
+           library.allInOne();
+    </script>
+</body>
+</html>
