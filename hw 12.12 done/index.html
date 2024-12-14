@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <span>asdfasdf: </span><input type="text" placeholder="enter your name" id="input">
+        <h1 id="h2"></h1>
+        <button  id="button">zhibery</button>
+        <h1 id="h1"></h1>
+
+    </form>
+    <script>
+        const text = document.querySelector("#input");
+        const h2 = document.querySelector("#h2");
+        const button = document.querySelector("#button");
+        const h1 = document.querySelector("#h1");
+
+        text.addEventListener("input", () => {
+            h2.textContent = "siz engisip shatyrsiz:" + text.value
+            return text.value
+        });
+        button.addEventListener("click", () => {
+            event.preventDefault();
+            h1.textContent = "siz engizdiniz: " + text.value;
+            h2.textContent = "";
+            text.value = "";
+            return text.value
+        })
+
+
+    </script>
+</body>
+</html>
