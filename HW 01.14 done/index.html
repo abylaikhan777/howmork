@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Не удалось получить данные");
+          }
+          return response.json();
+        })
+
+        .then((data) => {
+          for (let index = 0; index < data.lenght; index++) {
+            const name = data[index].name;
+            const email = data[index].email;
+            document.body.innerHTML += `
+            <h1>Имя: ${name}</h1>
+            <h2>Email: ${email}</h2>
+            `;
+          }
+        })
+
+        .catch((error) => {
+          console.error(
+            "Ошибка:",
+
+            error
+          );
+
+          console.log("Не удалось загрузить пост");
+        });
+    </script>
+  </body>
+</html>
